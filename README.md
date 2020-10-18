@@ -2,13 +2,13 @@
 
 ## Setting Up Project 
 - Install Docker & Docker-Compose 
-- In the project root run the following commands
+- In the project root run the following commands in given order
 ```bash
 docker-compose run backend npm install
-docker-compose run backend npm run migrate <- Migrates Database
-docker-compose run backend npm run seed <- Adds Fake Data to database
 docker-compose run client npm install
-docker-compose up -d
+docker-compose up -d                       <- Starts all services
+docker-compose run backend npm run migrate <- Migrates Database
+docker-compose run backend npm run seed    <- Adds Fake Data to database
 ```
 - To Stop Application
 ```bash
