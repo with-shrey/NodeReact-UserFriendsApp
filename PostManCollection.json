@@ -1,0 +1,303 @@
+{
+  "info": {
+    "_postman_id": "5d30a585-26be-480d-a8c2-6d422eb2a5c4",
+    "name": "CodeMyMobile-Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Users - Paginated",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:3001/api/v1/users?page=1&pageSize=20",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pageSize",
+              "value": "20"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Users - Paginated",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3001/api/v1/users?page=1&pageSize=20",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1451"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"5ab-I1RW++VK3EWWOJZAuNEQP3wjNZE\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 17 Oct 2020 18:49:40 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 57,\n        \"first_name\": \"User 0\",\n        \"last_name\": \"Last 0\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    },\n    {\n        \"id\": 58,\n        \"first_name\": \"User 1\",\n        \"last_name\": \"Last 1\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    },\n    {\n        \"id\": 59,\n        \"first_name\": \"User 2\",\n        \"last_name\": \"Last 2\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    },\n    {\n        \"id\": 60,\n        \"first_name\": \"User 3\",\n        \"last_name\": \"Last 3\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    },\n    {\n        \"id\": 61,\n        \"first_name\": \"User 4\",\n        \"last_name\": \"Last 4\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    },\n    {\n        \"id\": 62,\n        \"first_name\": \"User 5\",\n        \"last_name\": \"Last 5\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    },\n    {\n        \"id\": 63,\n        \"first_name\": \"User 6\",\n        \"last_name\": \"Last 6\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    },\n    {\n        \"id\": 64,\n        \"first_name\": \"User 7\",\n        \"last_name\": \"Last 7\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    },\n    {\n        \"id\": 65,\n        \"first_name\": \"User 8\",\n        \"last_name\": \"Last 8\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    },\n    {\n        \"id\": 66,\n        \"first_name\": \"User 9\",\n        \"last_name\": \"Last 9\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Friends",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:3001/api/v1/users/57/friends?page=1&pageSize=20",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "57",
+            "friends"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pageSize",
+              "value": "20"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Friends",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3001/api/v1/users/57/friends?page=1&pageSize=20",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "57",
+                "friends"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "146"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"92-ZBBbMp9mSTfdZpxtQYiJHT7Fu1c\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 17 Oct 2020 18:52:47 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 58,\n        \"first_name\": \"User 1\",\n        \"last_name\": \"Last 1\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Friend of Friends",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:3001/api/v1/users/57/friend-of-friends?page=1&pageSize=20",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "57",
+            "friend-of-friends"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "pageSize",
+              "value": "20"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Friend of Friends",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3001/api/v1/users/57/friend-of-friends?page=1&pageSize=20",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "57",
+                "friend-of-friends"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "20"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "146"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"92-jvFkxKlq/jj7UnlckMz+oA3WBsg\""
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 17 Oct 2020 18:53:48 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 59,\n        \"first_name\": \"User 2\",\n        \"last_name\": \"Last 2\",\n        \"avatar\": null,\n        \"createdAt\": \"2020-10-17T18:21:24.000Z\",\n        \"updatedAt\": \"2020-10-17T18:21:24.000Z\"\n    }\n]"
+        }
+      ]
+    }
+  ],
+  "protocolProfileBehavior": {}
+}

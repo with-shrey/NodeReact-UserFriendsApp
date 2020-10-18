@@ -1,0 +1,48 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: app
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+
+  backend:
+    depends_on:
+      - db
+    image: node:10-alpine
+    command: npm run dev
+    working_dir: /app
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    volumes:
+      - ".:/app"
+      - "./client:/client"
+
+  client:
+    depends_on:
+      - backend
+    image: node:10-alpine
+    command: npm run start
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    environment:
+      - CI=true
+    restart: unless-stopped
+    volumes:
+      - "./client:/app"
+
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+
+volumes:
+  db_data: { }

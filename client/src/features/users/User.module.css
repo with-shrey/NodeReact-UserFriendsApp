@@ -1,0 +1,76 @@
+.container {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: white;
+    flex-direction: column;
+}
+
+.button {
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background: rgb(130, 153, 243);
+}
+
+.buttonError {
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background: rgb(202, 60, 60);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageChange {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.pageChange span {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+}
+
+.userItem {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.userItem h3 {
+    margin: 0px !important;
+}
+
+.imgContainer {
+    height: 100%;
+    padding: 10px;
+}
+
+.imgContainer img {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.userDetails {
+    padding: 10px;
+}
+
+.userDetails * {
+    padding: 5px;
+}
